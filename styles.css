@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+  }
+  p {
+    text-align: justify;
+  }
+  
+  #header_main {
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    transition: background-color 0.5s ease;
+    background-color: transparent;
+    z-index: 3;
+  }
+  
+  .show-background-header {
+
+    background-color: #418fa5;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+    height: 4rem;
+  }
+  .nav-container img {
+    /* margin-top: 0.5rem; */
+    /* width: 13rem; */
+    height: 4rem;
+  }
+  
+  .menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .menu-btn__burger {
+    width: 1.5rem;
+    height: 0.12rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 0.12rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .menu-btn__burger::before {
+    transform: translateY(-0.5rem);
+  }
+  
+  .menu-btn__burger::after {
+    transform: translateY(0.5rem);
+  }
+  
+  .menu-item {
+    width: 100%;
+  }
+  
+  .menu-item li {
+    display: flex;
+    border-top: 1px solid #0e1b48;
+    height: 3rem;
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #e4dfdf;
+  }
+  .menu-li-show-scroll {
+    background-color: #fff;
+  }
+  
+  .menu-item li:nth-child(4) {
+    border-bottom: 1px solid #0e1b48;
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: black;
+    font-family: "Pompiere", sans-serif;
+    font-size: 1.5rem;
+  }
+  
+  .menu-item li.active a {
+    color: #0e1b48;
+  }
+  
+  /******** animation **********/
+  
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+  
+  .link-container {
+    position: absolute;
+    top: 4rem;
+    color: #dcdcdc;
+    width: 100%;
+    margin-left: 100%;
+    opacity: 0;
+    transition: margin-left 0.7s ease-in-out, opacity 0.7s ease-in-out;
+  }
+  
+  .link-container.show {
+    margin-left: -1rem;
+    opacity: 1;
+  }
+  
+  @media screen and (min-width: 900px) {
+    #header_main {
+      background-color: #0e1b48;
+      height: 4rem;
+    }
+  
+    .menu-btn {
+      display: none;
+    }
+  
+    .menu-item li:nth-child(4) {
+      border-bottom: none;
+    }
+  
+    .link-container {
+      display: flex;
+      position: initial;
+      height: 100%;
+      justify-content: flex-end;
+      background: transparent;
+      margin-left: 0;
+      opacity: 1;
+      align-items: center;
+    }
+    .menu-item {
+      display: flex;
+      /* justify-content: space-between; */
+      align-items: center;
+      justify-content: end;
+      border: none;
+      gap: 2rem;
+      width: 40rem;
+    }
+    .menu-item li {
+      border: none;
+      background-color: transparent;
+      width: auto;
+
+    
+
+    }
+    .menu-item li a:hover {
+      scale: 1;
+      color: #fff;
+    }
+  
+    .menu-item li.active a {
+      text-decoration: underline #fff;
+      color: #fff;
+    }
+    .menu-item a {
+      font-size: 2rem;
+      color: #fff;
+      font-family: "Pompiere", sans-serif;
+    }
+  
+    .nav-container img {
+        height: 3rem;
+        margin: 0.5rem;
+      /* width: 15rem; */
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .link-container {
+      width: 60%;
+    }
+    .menu-item {
+      width: 50rem;
+    }
+  }
+
+
+  main {
+    margin-top: 5rem;
+  }
+
+  .about-me-container {
+    width: 90%;
+    max-width: 60rem;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-me-container h2 {
+    font-size: 1.8rem;
+    color: #0e1b48;
+    margin: 0.5rem;
+    width: 50%;
+    text-align: center;
+    font-family: "Pompiere", sans-serif;
+  }
+  .presentation-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .title-presentation {
+    display: flex;
+    align-items: center;
+  }
+  .title-presentation .line1 {
+    height: 2px;
+    width: 50%;
+    background: linear-gradient(to right, #fff, #0e1b48);
+  }
+  .title-presentation .line2 {
+    height: 2px;
+    width: 50%;
+    background: linear-gradient(to left, #fff, #0e1b48);
+  }
+  .picture-presentation-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .picture-presentation-container picture {
+    margin: 1rem auto;
+  }
+  .picture-presentation-container img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+  }
+  .presentation-container a,
+  .value-container a {
+    text-decoration: none;
+    color: #0e1b48;
+  }
+  .presentation-text {
+    margin: 1rem 0;
+  }
+  .values-container h3 {
+    font-size: 1.2rem;
+    color: #0e1b48;
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: left;
+  
+  }
+  .methodologies-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .values-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .value-container {
+    padding: 0.5rem;
+  }
+  @media screen and (min-width: 745px) {
+    .picture-presentation-container {
+      margin: 0 auto;
+      flex-direction: row;
+      align-items: center;
+    }
+    .presentation-text {
+      flex-grow: 1; /* Allow the text to take up the remaining space */
+      margin-left: 20px; /* Add some space between the image and the text */
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .picture-presentation-container {
+      width: 80%;
+    }
+    .picture-presentation-container img {
+      width: 12rem;
+      height: 12rem;
+    }
+    .methodologies-container {
+      margin-top: 2rem;
+    }
+  
+    .about-me-container h2 {
+      font-size: 3rem;
+      width: 70%;
+    }
+  
+    .value-container h3 {
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .about-me-container {
+      width: 60rem;
+      margin: 2rem auto;
+    }
+  }
+  
+
+
+  /*********buuton to top ******/
+#scrollToTop {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 35px; /* Place the button at the bottom of the page */
+    right: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #0e1b48; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    border-radius: 50%; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    width: 2rem;
+    height: 2rem;
+  }
+  #scrollToTop img {
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  #scrollToTop:hover {
+    background-color: #4e4d4d; /* Add a dark-grey background on hover */
+  }
+  
+  /****************************** footer ***********************************/
+  
+  footer {
+    position: fixed; /* if you want footer fixe */
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    /* background-color: #19467b; */
+    background-color: #418fa5;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  
+  footer .contact-icons-container {
+    display: flex;
+    gap: 1rem;
+  }
+  footer a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
