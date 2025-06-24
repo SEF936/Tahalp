@@ -36,16 +36,25 @@
   
   .nav-container {
     display: flex;
+
     justify-content: space-between;
     background-color: #fff;
     align-items: center;
-    /* margin: 0 1rem; */
+    padding-right: 1rem;
     height: 4rem;
+    gap: 1rem;
+    
+
   }
+  .nav-container a {
+    width: 100%;
+    max-width: 30rem;
+  }
+
   .nav-container img {
     /* margin-top: 0.5rem; */
-    /* width: 13rem; */
-    height: 4rem;
+     width: 100%;
+    height: 4.3rem;
   }
   
   .menu-btn {
@@ -61,7 +70,7 @@
   .menu-btn__burger {
     width: 1.5rem;
     height: 0.12rem;
-    background: #fff;
+    background: #609195;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
     transition: all 0.5s ease-in-out;
@@ -73,7 +82,8 @@
     position: absolute;
     width: 1.5rem;
     height: 0.12rem;
-    background: #fff;
+    border-top: 1px solid #609195;
+    background: #609195;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
     transition: all 0.5s ease-in-out;
@@ -101,7 +111,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: #e4dfdf;
+    background-color: #fff;
   }
   .menu-li-show-scroll {
     background-color: #fff;
@@ -227,22 +237,23 @@
 
 
   main {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 
   .about-me-container {
-    width: 90%;
-    max-width: 60rem;
-    margin: 2rem auto;
+    width: 100%;
+    background-color: #609195;
+    margin: 0 auto 2rem auto;
+ 
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding-top: 4rem;
   }
   .about-me-container h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #0e1b48;
     margin: 0.5rem;
-    width: 50%;
     text-align: center;
     font-family: "Pompiere", sans-serif;
   }
@@ -250,11 +261,8 @@
     display: flex;
     flex-direction: column;
   }
-  .title-presentation {
-    display: flex;
-    align-items: center;
-  }
-  .title-presentation .line1 {
+
+  /* .title-presentation .line1 {
     height: 2px;
     width: 50%;
     background: linear-gradient(to right, #fff, #0e1b48);
@@ -263,33 +271,37 @@
     height: 2px;
     width: 50%;
     background: linear-gradient(to left, #fff, #0e1b48);
-  }
+  } */
   .picture-presentation-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .picture-presentation-container picture {
     margin: 1rem auto;
+    width: 90%;
+    max-width: 20rem;
+    max-height: 15rem;
   }
   .picture-presentation-container img {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+
   }
-  .presentation-container a,
-  .value-container a {
-    text-decoration: none;
-    color: #0e1b48;
-  }
+
   .presentation-text {
     margin: 1rem 0;
+    max-width: 25rem;
+    padding: 0 1rem;
+    color: #fff;
   }
-  .values-container h3 {
+  .presentation-container h3 {
     font-size: 1.2rem;
     color: #0e1b48;
-    margin: 0.5rem 0;
+    margin-top: 2rem;
     width: 100%;
-    text-align: left;
+    text-align: center;
   
   }
   .methodologies-container {
@@ -305,11 +317,53 @@
   .value-container {
     padding: 0.5rem;
   }
+
+  /* Par défaut (mobile) */
+.mobile {
+  display: block;
+}
+.desktop {
+  display: none;
+}
+
+/* À partir de 746px (desktop) */
+@media (min-width: 746px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+    margin: 0;
+  }
+}
   @media screen and (min-width: 745px) {
+    .about-me-container{
+      width: 80%;
+          height: 90vh;;
+
+    }
+    .about-me-container h2{
+      font-size: 2.5rem;
+      width: 100%;
+    }
+      .about-me-container h3{
+      font-size: 1.5rem;
+    }
     .picture-presentation-container {
+           width: 90%;
       margin: 0 auto;
       flex-direction: row;
       align-items: center;
+
+    }
+     .picture-presentation-container img {
+      width: 15rem;
+      height: 12rem;
+    }
+
+    .picture-presentation-container:nth-child(3){
+
+      flex-direction: row-reverse;
     }
     .presentation-text {
       flex-grow: 1; /* Allow the text to take up the remaining space */
@@ -319,11 +373,14 @@
   
   @media screen and (min-width: 900px) {
     .picture-presentation-container {
-      width: 80%;
+      width: 90%;
     }
     .picture-presentation-container img {
-      width: 12rem;
+      width: 20rem;
       height: 12rem;
+    }
+    .presentation-text{
+      max-width: 100%;
     }
     .methodologies-container {
       margin-top: 2rem;
@@ -331,7 +388,10 @@
   
     .about-me-container h2 {
       font-size: 3rem;
-      width: 70%;
+
+    }
+    h3.desktop {
+      margin-top: 0;
     }
   
     .value-container h3 {
@@ -340,8 +400,8 @@
   }
   @media screen and (min-width: 1200px) {
     .about-me-container {
-      width: 60rem;
-      margin: 2rem auto;
+      /* width: 80%; */
+      /* margin: 2rem auto; */
     }
   }
   
