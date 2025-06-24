@@ -29,14 +29,17 @@
   
   .show-background-header {
 
-    background-color: #418fa5;
+    background-color: 
+    #fff
+    ;
   }
   
   .nav-container {
     display: flex;
     justify-content: space-between;
+    background-color: #fff;
     align-items: center;
-    margin: 0 1rem;
+    /* margin: 0 1rem; */
     height: 4rem;
   }
   .nav-container img {
@@ -138,7 +141,7 @@
   .link-container {
     position: absolute;
     top: 4rem;
-    color: #dcdcdc;
+    color: #0e1b48;
     width: 100%;
     margin-left: 100%;
     opacity: 0;
@@ -170,7 +173,7 @@
       height: 100%;
       justify-content: flex-end;
       background: transparent;
-      margin-left: 0;
+      margin: 0 1rem;
       opacity: 1;
       align-items: center;
     }
@@ -193,16 +196,16 @@
     }
     .menu-item li a:hover {
       scale: 1;
-      color: #fff;
+      color: #609195;
     }
   
     .menu-item li.active a {
-      text-decoration: underline #fff;
-      color: #fff;
+      text-decoration: underline #0E1B48;
+      color: #0E1B48;
     }
     .menu-item a {
       font-size: 2rem;
-      color: #fff;
+      color: #0E1B48;
       font-family: "Pompiere", sans-serif;
     }
   
@@ -353,7 +356,7 @@
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: #0e1b48; /* Set a background color */
+    background-color: #609195; /* Set a background color */
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     border-radius: 50%; /* Rounded corners */
@@ -378,8 +381,8 @@
     width: 100%;
     height: 3rem;
     /* background-color: #19467b; */
-    background-color: #418fa5;
-    color: #fff;
+    background-color: #609195;
+    color: #0E1B48;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -389,9 +392,10 @@
   footer .contact-icons-container {
     display: flex;
     gap: 1rem;
+    color: #0E1B48;
   }
   footer a {
     text-decoration: none;
-    color: #fff;
+    color: #0d2785;
   }
   
