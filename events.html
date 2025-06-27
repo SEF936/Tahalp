@@ -3,11 +3,13 @@
   <head>
     <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="events.css" as="style" />
+    <link rel="stylesheet" href="events.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <meta name="csrf-param" content="athenticity_token" />
     <meta name="csrf-token" content="" id="csrf-token" />
-    <title>Accueil | Tahalp</title>
+    <title>Evénements | Tahalp</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,7 +41,7 @@
           </div>
           <div class="link-container">
             <ul class="menu-item" id="menu-item">
-              <li class="active">
+              <li class="">
                 <a
                   class=""
                   href="./"
@@ -57,7 +59,7 @@
               </li>
               <li class="">
                 <a
-                  class=""
+                  class="active"
                   href="./events.html"
                   aria-label="redirect to Evenements section"
                   >Evénements</a
@@ -77,98 +79,116 @@
       </nav>
     </header>
     <main>
-      <section id="about_me" class="about-me-container">
-        <div class="presentation-container">
+      <section id="consultations" class="consultations-section">
+        <div class="consultations-global-container">
           <div class="title-presentation">
-            <h2>Qui Sommes Nous</h2>
+            <h2>Evénements</h2>
           </div>
 
-          <div class="picture-presentation-container">
-            <picture>
-              <!-- <source
-                media="(max-width: 640px)"
-                srcset="./assets/alexia-houssou.webp"
-              />
-              <source
-                media="(max-width: 1024px)"
-                srcset="./assets/alexia-houssou.webp"
-              />
-              <source
-                media="(min-width: 1024px)"
-                srcset="./assets/alexia-houssou.webp"
-              /> -->
-              <img
-                src="./assets/OIP 2.jpg"
-                alt="alexia houssou"
-                width="1024"
-                height="auto"
-              />
-            </picture>
+          <div class="consultation-container">
+            <div
+              class="image-consultation"
+              onclick="toggleParagraphVisibility('consultation-paragraph1')"
+            >
+              <h3>Couscous Day</h3>
 
-            <p class="presentation-text">
-              L'association Tahalp met en œuvre une variété d'initiatives pour
-              faire vivre la culture algérienne et favoriser l'intégration de la
-              communauté dans la société suisse. Elle organise régulièrement des
-              événements culturels mettant à l'honneur la musique, les
-              traditions, l'art culinaire, l'artisanat, le cinéma et les habits
-              traditionnels. Des rendez-vous d'information sont également
-              proposés afin de présenter les services et les opportunités
-              offerts par les institutions locales, facilitant ainsi
-              l'intégration sociale et professionnelle. En collaborant
-              étroitement avec les structures suisses, Tahalp renforce les liens
-              entre les communautés et les acteurs locaux. Parmi les moments
-              forts de l'année, l'association célèbre Yennayer, le Nouvel An
-              berbère, dans une ambiance festive et conviviale. Le Couscous Day
-              est un autre événement emblématique, alliant dégustation,
-              animations et ateliers autour de ce plat emblématique. Enfin,
-              Tahalp propose des ateliers et des cours pour tous les âges,
-              allant de l'apprentissage de la langue à la découverte de la
-              cuisine, de l'artisanat, de la géographie et de l'histoire, dans
-              une démarche de transmission et de valorisation du patrimoine.
-            </p>
+              <picture>
+                <source
+                  media="(min-width: 320px)"
+                  srcset="./assets/couscous.jpg"
+                />
+                <img
+                  src="./assets/couscous.jpg"
+                  alt="séance psy"
+                  width="320"
+                  height="auto"
+                />
+              </picture>
+            </div>
+            <div class="text-consultation-container">
+              <div class="paragraph-hidden" id="consultation-paragraph1">
+                <div class="event-title">
+                  <span>28/08/2025</span>
+                  <h3>Couscous Day</h3>
+                </div>
+
+                <p>
+                  Venez célébrer avec nous le plat emblématique récemment
+                  inscrit au patrimoine mondial de l'UNESCO ! Le Couscous Day
+                  est bien plus qu'un simple moment gourmand : c'est une
+                  véritable fête des sens, un hommage à nos traditions
+                  familiales et à notre héritage culinaire. Dans une ambiance
+                  chaleureuse et conviviale, nous vous invitons à partager ce
+                  symbole de générosité et de vivre-ensemble à travers des
+                  dégustations, des animations et des ateliers pour petits et
+                  grands.
+                </p>
+              </div>
+
+              <picture>
+                <source
+                  media="(min-width: 745px)"
+                  srcset="./assets/couscous.jpg"
+                />
+                <img
+                  src="./assets/couscous.jpg"
+                  alt="séance psy"
+                  width="800"
+                  height="auto"
+                />
+              </picture>
+            </div>
           </div>
-          <div class="picture-presentation-container">
-            <h3 class="mobile">Objectifs Principaux</h3>
+          <div class="consultation-container">
+            <div
+              class="image-consultation"
+              onclick="toggleParagraphVisibility('consultation-paragraph2')"
+            >
+              <h3>Yennayer - Nouvel An Amazigh</h3>
+              <picture>
+                <source
+                  media="(min-width: 320px)"
+                  srcset="./assets/Yennayer.jpg"
+                />
+                <img
+                  src="./assets/Yennayer.jpg"
+                  alt="séance psy"
+                  width="320"
+                  height="auto"
+                />
+              </picture>
+            </div>
+            <div class="text-consultation-container">
+              <div class="paragraph-hidden" id="consultation-paragraph2">
+                    <div class="event-title">
+                  <span>28/08/2025</span>
+                  <h3>Couscous Day</h3>
+                </div>
+                <p>
+                  Plongez dans l'univers fascinant du Nouvel An berbère, une
+                  fête ancestrale célébrée depuis des siècles à travers le monde
+                  amazigh. Yennayer marque non seulement le début d'une nouvelle
+                  année, mais aussi la fin des labours et le cœur de la saison
+                  humide. C'est un moment de rassemblement, de transmission et
+                  de spiritualité, où se mêlent repas traditionnels, jeux
+                  populaires, rites symboliques et récits anciens. Une occasion
+                  unique de découvrir la richesse de cette culture et de ses
+                  liens profonds avec la nature et l'invisible.
+                </p>
+              </div>
 
-            <picture>
-              <!-- <source
-                media="(max-width: 640px)"
-                srcset="./assets/alexia-houssou.webp"
-              />
-              <source
-                media="(max-width: 1024px)"
-                srcset="./assets/alexia-houssou.webp"
-              />
-              <source
-                media="(min-width: 1024px)"
-                srcset="./assets/alexia-houssou.webp"
-              /> -->
-              <img
-                src="./assets//pexels-noreedine-maamri-218979-695987.jpg"
-                alt="alexia houssou"
-                width="1024"
-                height="auto"
-              />
-            </picture>
-            <div>
-              <h3 class="desktop">Objectifs Principaux</h3>
-              <p class="presentation-text">
-                L'association Tahalp œuvre pour le rapprochement des cultures et
-                la valorisation de la diversité. Elle s'engage à promouvoir les
-                échanges interculturels et à encourager la participation civique
-                de toutes et tous, en particulier au sein de la communauté
-                algérienne en Suisse. À travers ses actions, Tahalp souhaite
-                faciliter l'intégration des Algériens dans le tissu social
-                suisse, en créant des espaces de dialogue, de solidarité et de
-                partage. L'association met également un point d'honneur à faire
-                rayonner la richesse de la culture algérienne, en mettant en
-                lumière sa musique, ses traditions, sa cuisine et son artisanat.
-                En organisant des événements festifs et culturels, elle fait
-                découvrir les grandes célébrations traditionnelles d'Algérie, à
-                travers des repas conviviaux, des animations, des expositions et
-                des activités ouvertes à tous, dans un esprit de convivialité et
-                de transmission.
-              </p>
+              <picture>
+                <source
+                  media="(min-width: 745px)"
+                  srcset="./assets/Yennayer.jpg"
+                />
+                <img
+                  src="./assets/Yennayer.jpg"
+                  alt="séance psy"
+                  width="800"
+                  height="auto"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -262,5 +282,14 @@
       src="https://kit.fontawesome.com/a65e31546e.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function toggleParagraphVisibility(paragraphId) {
+        const mediaQuery = window.matchMedia("(min-width: 1200px)");
+        const paragraph = document.getElementById(paragraphId);
+        if (!mediaQuery.matches) {
+          paragraph.classList.toggle("paragraph-visibility");
+        }
+      }
+    </script>
   </body>
 </html>
