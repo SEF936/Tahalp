@@ -159,7 +159,7 @@
   }
   
   .link-container.show {
-    margin-left: -1rem;
+    margin-left: 0rem;
     opacity: 1;
   }
   
@@ -220,7 +220,7 @@
     }
   
     .nav-container img {
-        height: 3rem;
+        height: 4rem;
         margin: 0.5rem;
       /* width: 15rem; */
     }
@@ -339,7 +339,7 @@
   @media screen and (min-width: 745px) {
     .about-me-container{
       width: 80%;
-          height: 90vh;;
+          height: 90vh;
 
     }
     .about-me-container h2{
@@ -398,12 +398,12 @@
       font-size: 1.5rem;
     }
   }
-  @media screen and (min-width: 1200px) {
+  /* @media screen and (min-width: 1200px) {
     .about-me-container {
-      /* width: 80%; */
-      /* margin: 2rem auto; */
+      width: 80%;
+      margin: 2rem auto;
     }
-  }
+  } */
   
 
 
@@ -416,7 +416,7 @@
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: #609195; /* Set a background color */
+    background-color: #0e1b48; /* Set a background color */
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     border-radius: 50%; /* Rounded corners */

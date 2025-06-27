@@ -1,0 +1,232 @@
+.consultations-section {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #609195;
+  align-items: center;
+  margin: 0 auto 2rem auto;
+  padding-top: 4rem;
+}
+
+.consultations-global-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+}
+
+.consultations-global-container h2 {
+  font-size: 2rem;
+  color: #0e1b48;
+  margin: 0.5rem;
+  text-align: center;
+  font-family: "Pompiere", sans-serif;
+}
+
+.consultations-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.image-consultation h3 {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  z-index: 1;
+}
+
+.consultation-container {
+  width: 20rem;
+  border-radius: 5px;
+}
+
+.image-consultation {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  max-width: 25rem;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+}
+
+.image-consultation picture {
+  width: 100%;
+  height: 10rem;
+}
+
+.image-consultation img {
+  width: 100%;
+  max-height: 10rem;
+  filter: opacity(0.8) brightness(0.5);
+  border-radius: 5px;
+}
+
+.paragraph-hidden {
+  display: none;
+  /* Hide the paragraph by default */
+  padding: 10px;
+  /* Add some padding for better visibility */
+}
+
+.paragraph-visibility {
+  transition: opacity 1s ease;
+  /* Smooth transition effect */
+  display: block;
+  opacity: 1;
+  border: 1px solid #19467b;
+  color: #0e1b48;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+}
+
+.paragraph-visibility h3 {
+  display: none;
+}
+
+.paragraph-visibility span {
+  width: 100%;
+  text-align: center;
+}
+
+.text-consultation-container picture {
+  display: none;
+}
+
+@media screen and (min-width: 745px) {
+  .consultations-global-container h2 {
+    font-size: 3rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .consultations-section {
+    width: 80%;
+    padding-top: 2rem;
+    /* height: 90vh; */
+  }
+
+  .image-consultation h3 {
+    display: none;
+  }
+
+  .event-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 6rem;
+    margin: 2rem 0;
+    color: #19467b;
+  }
+
+  .event-title h3 {
+    font-size: 1.5rem;
+  }
+
+  .event-title span {
+    margin-left: -6rem;
+    display: flex;
+  }
+
+  /* .consultations-global-container {
+    display: flex;
+    flex-direction: column;
+  } */
+  .consultations-global-container h2 {
+    font-size: 3rem;
+    width: 100%;
+  }
+
+  /* .first-consult-container {
+    margin: 2rem 0;
+  }
+  .first-consult-container h3 {
+    font-size: 1.5rem;
+  } */
+  .consultations-global-container .consultation-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .image-consultation {
+    cursor: initial;
+    flex-direction: column;
+    width: 100%;
+
+    min-width: 40rem;
+    max-width: 100rem;
+  }
+
+  /* .consultation-container:nth-child(3) .text-consultation-container {
+    cursor: initial;
+    flex-direction: row;
+    text-align: justify;
+  } */
+
+  .image-consultation picture {
+    display: none;
+  }
+
+  .image-consultation .event-title span {
+    display: block;
+  }
+
+  .image-consultation h3 {
+    position: relative;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+    color: #19467b;
+  }
+
+  .paragraph-hidden {
+    display: block;
+    width: 200%;
+    text-align: justify;
+    padding: 0;
+  }
+
+  .text-consultation-container {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #fff;
+    gap: 2rem;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  .text-consultation-container picture {
+    display: block;
+    width: 60rem;
+    height: 18rem;
+  }
+
+  .text-consultation-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  .text-consultation-container p {
+    padding: 0 2rem 0 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .consultations-global-container {
+    max-width: 90rem;
+    margin: 2rem auto;
+  }
+}
