@@ -341,6 +341,7 @@
       width: 80%;
           height: 90vh;
 
+
     }
     .about-me-container h2{
       font-size: 2.5rem;
@@ -348,6 +349,10 @@
     }
       .about-me-container h3{
       font-size: 1.5rem;
+    }
+
+    .presentation-container{
+      gap: 3rem;
     }
     .picture-presentation-container {
            width: 90%;
