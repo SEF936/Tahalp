@@ -69,3 +69,38 @@ function setCSRFToken() {
 
 // Set CSRF token when the page is loaded
 window.addEventListener("load", setCSRFToken);
+
+
+
+/************** action validation contact  *******/
+
+let popup = document.getElementById("popup");
+function openPopup() {
+  popup.classList.add("open-popup");
+}
+function closePopup() {
+  popup.classList.remove("open-popup");
+}
+
+function sendEmail() {
+  Email.send({
+  SecureToken: "7b0cb625-ec02-4e3c-b401-4d13edadfb23",
+    To: "lopes_nico@yahoo.fr",
+    From: "nlopes93600@gmail.com",
+    Subject: "Nouvelle demande",
+    Body:
+      "Vous avez reçu une nouvelle demande d'information de la part de" +
+      "<br>" +
+      document.getElementById("name").value +
+      "." +
+      "<br>" +
+      "Prénom et nom : " +
+      document.getElementById("name").value +
+      "<br> phone: " +
+      document.getElementById("phone").value +
+      "<br> Email: " +
+      document.getElementById("email").value +
+      "<br> Message: " +
+      document.getElementById("message").value,
+  }).then((message) => openPopup());
+}
