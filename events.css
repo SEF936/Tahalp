@@ -1,7 +1,6 @@
 .consultations-section {
   width: 100%;
-  /* height: 100%; */
-      min-height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -15,7 +14,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* flex-direction: column; */
   align-items: center;
   width: 100%;
   gap: 3rem;
@@ -93,10 +91,16 @@
 .paragraph-visibility h3 {
   display: none;
 }
-
-.paragraph-visibility span {
-  width: 100%;
+.event-title{
+  display: flex;
+  
+}
+.event-title span {
+  width: 6rem;
   text-align: center;
+  font-size: 1.3rem;
+  margin: 1rem auto;
+  color: #0e1b48;
 }
 
 .text-consultation-container picture {
@@ -125,8 +129,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    gap: 6rem;
+    width: 60%;
     margin: 2rem 0;
     color: #19467b;
   }
@@ -136,7 +139,7 @@
   }
 
   .event-title span {
-    margin-left: -6rem;
+    margin-left: 0rem;
     display: flex;
   }
 
