@@ -235,7 +235,7 @@
     }
   }
 
-
+/********* a propos de  *****************/
   main {
     margin-top: 4rem;
   }
@@ -260,6 +260,7 @@
   .presentation-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   /* .title-presentation .line1 {
@@ -280,19 +281,26 @@
   }
   .picture-presentation-container picture {
     margin: 1rem auto;
-    width: 90%;
-    max-width: 20rem;
-    max-height: 15rem;
+    width: 80%;
+    /* max-width: 25rem;
+    max-height: 25rem; */
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
   }
   .picture-presentation-container img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    display: block;
 
   }
 
   .presentation-text {
     margin: 1rem 0;
-    max-width: 25rem;
+    width: 90%;
+    /* max-width: 25rem; */
     padding: 0 1rem;
     color: #fff;
   }
@@ -304,19 +312,12 @@
     text-align: center;
   
   }
-  .methodologies-container {
+
+  .objectifs-container{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
   }
-  .values-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .value-container {
-    padding: 0.5rem;
-  }
+
 
   /* Par défaut (mobile) */
 .mobile {
@@ -327,7 +328,7 @@
 }
 
 /* À partir de 746px (desktop) */
-@media (min-width: 746px) {
+@media (min-width: 1240px) {
   .mobile {
     display: none;
   }
@@ -336,10 +337,11 @@
     margin: 0;
   }
 }
-  @media screen and (min-width: 745px) {
+  /* @media screen and (min-width: 745px) { */
+     @media screen and (min-width: 1240px) {
     .about-me-container{
-      width: 80%;
-          height: 90vh;
+      width: 100%;
+          height: 100vh;
 
 
     }
@@ -376,13 +378,28 @@
     }
   }
   
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1240px) {
     .picture-presentation-container {
       width: 90%;
     }
+    .picture-presentation-container:nth-child(3) picture{
+
+      width: 100%;
+    }
+
+        .picture-presentation-container:nth-child(3) picture{
+          width: 200%;
+          height: 100%;
+        }
+
+        
+  .objectifs-container{
+ flex-direction: column;
+  }
     .picture-presentation-container img {
-      width: 20rem;
-      height: 12rem;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .presentation-text{
       max-width: 100%;
