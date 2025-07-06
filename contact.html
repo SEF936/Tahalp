@@ -9,13 +9,56 @@
     <meta charset="UTF-8" />
     <meta name="csrf-param" content="athenticity_token" />
     <meta name="csrf-token" content="" id="csrf-token" />
+    <meta property="og:type" content="website" />
+
+    <meta
+      name="keywords"
+      content="Tahalp, Algériens en Suisse, association, intégration, événements, communauté algérienne, diaspora algérienne"
+    />
+    <meta property="og:url" content="https://www.tahalp.ch/contact" />
+    <meta property="og:title" content="Contact | Tahalp" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Contact | Tahalp" />
+    <meta
+      name="description"
+      content="Tahalp est une association des Algériens en Suisse qui organise des événements pour favoriser l'intégration sociale et renforcer les liens communautaires."
+    />
+
+    <meta
+      property="og:description"
+      content="Tahalp est une association des Algériens en Suisse qui organise des événements pour favoriser l'intégration sociale et renforcer les liens communautaires."
+    />
+    <meta
+      property="twitter:description"
+      content="Tahalp est une association des Algériens en Suisse qui organise des événements pour favoriser l'intégration sociale et renforcer les liens communautaires."
+    />
+    <meta property="og:image" content="./assets/Tahalp.jpg" />
+    <link rel="canonical" href="https://www.tahalp.ch/contact" />
     <title>Contact | Tahalp</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "OpadTEYwrxt7z9OAX",
+        });
+      })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Alegreya&family=Pompiere:wght@400&Roboto:wght@400;700&display=swap"
       rel="stylesheet"
+    />
+    <meta name="theme-color" content="#ffffff" />
+               <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="./assets/echarpe.webp"
     />
   </head>
   <body>
@@ -24,10 +67,13 @@
         <div class="nav-container">
           <a class="" href="./" aria-label="redirect to Accueil me section">
             <picture>
-              <source media="(min-width: 320px)" srcset="./assets/echarpe.jpg" />
+              <source
+                media="(min-width: 320px)"
+                srcset="./assets/echarpe.webp"
+              />
               <img
                 loading="lazy"
-                src="./assets/echarpe.jpg"
+                src="./assets/echarpe.webp"
                 alt="logo alexia houssou"
               />
             </picture>
@@ -78,50 +124,56 @@
     <main>
       <section id="contact" class="contact-section">
         <h2>CONTACT</h2>
-        <p>Si vous avez besoin de plus d'informations, contactez nous par email à l'adresse tahalp2025@gmail.com ou par téléphone au +41 077 958 58 58</p>
+        <p>
+          Si vous avez besoin de plus d'informations, contactez nous par email à
+          l'adresse tahalp2025@gmail.com ou par téléphone au +41 077 958 58 58
+        </p>
         <div class="contact-container">
           <div class="form-container">
-            <form onsubmit="sendEmail(); reset(); return false;" autocomplete="on">
-                <h3>Contactez-nous</h3>
-                <label for="name">Nom et prénom :
-                    <input type="text" id="name" autocomplete="on" required>
-                </label>
-                <label for="email">Email:
-                  <input type="email" id="email" autocomplete="on" required>
-                </label>
-                <label for="phone">Téléphone
-                  <input type="tel" id="phone" autocomplete="on">
+            <form id="contact-form" autocomplete="on">
+              <h3>Contactez-nous</h3>
+              <label for="name"
+                >Nom et prénom :
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  autocomplete="on"
+                  required
+                />
               </label>
-                <label for="message">Message:
-                    <textarea type="text" id="message" required></textarea>
-                </label>
-                <button class="btn" type="submit">Envoyer</button>
+              <label for="email"
+                >Email:
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  autocomplete="on"
+                  required
+                />
+              </label>
+              <label for="phone"
+                >Téléphone
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  autocomplete="on"
+                  required
+                />
+              </label>
+              <label for="message"
+                >Message:
+                <textarea
+                  type="text"
+                  name="message"
+                  id="message"
+                  required
+                ></textarea>
+              </label>
+              <button class="btn" type="submit">Envoyer</button>
             </form>
-        </div>
-        <!-- <div class="map-container">
-          <div class="contact-position">
-            <p>Rue de Lyon Bâtiment E4, 94550 Zurich, Suisse</p>
-            <div class="link-contact-container">
-              <div class="icon-contact">
-                <picture>
-                  <source media="(min-width: 320px)" srcset="./assets/envelope.png">
-                  <img src="./assets/envelope.png" alt="mail">
-                </picture>
-                <a target="_blank" href="mailto:tahalp2025@gmail.com">tahalp2025@gmail.com</a>
-              </div>
-              <div class="icon-contact">
-                <picture>
-                  <source media="(min-width: 320px)" srcset="./assets/smartphone-call.png">
-                  <img src="./assets/smartphone-call.png" alt="phone">
-                </picture>
-                <a href="tel:+33699774604">+33-699774604</a>
-              </div>
-            </div>
           </div>
-          <div class="position-map">
-            <iframe title="map position" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.1373242547934!2d2.3548480760507426!3d48.760173807613825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e677d7ebf6af8f%3A0x30e5f4f033731ec1!2sRungis%20%26%20Co%20-%20Incubateur%20de%20startups!5e0!3m2!1sfr!2sch!4v1694686608759!5m2!1sfr!2sch" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        </div> -->
         </div>
       </section>
     </main>
@@ -129,6 +181,26 @@
     <button onclick="scrollToTop()" id="scrollToTop" title="Go to top">
       <img src="./assets/right-arrow.png" alt="top arrow" />
     </button>
+    <div
+      id="popup"
+      style="
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border: 2px solid #4caf50;
+        padding: 1.5rem 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+      "
+    >
+      <p style="margin: 0; color: #4caf50; font-weight: bold">
+        ✅ Message envoyé avec succès !
+      </p>
+    </div>
     <footer>
       <div class="contact-icons-container">
         <a
@@ -213,5 +285,29 @@
       src="https://kit.fontawesome.com/a65e31546e.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          emailjs.sendForm("service_ioa4zzv", "template_qnfcya5", this).then(
+            function (response) {
+              // Affiche le popup
+              const popup = document.getElementById("popup");
+              popup.style.display = "block";
+
+              // Masque après 3 secondes
+              setTimeout(() => {
+                popup.style.display = "none";
+              }, 3000);
+              document.getElementById("contact-form").reset();
+            },
+            function (error) {
+              alert("Erreur : " + error.text);
+            }
+          );
+        });
+    </script>
   </body>
 </html>
