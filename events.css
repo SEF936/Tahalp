@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
+  /* align-items: center; */
   width: 100%;
   gap: 3rem;
 }
@@ -129,7 +129,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 95%;
     margin: 2rem 0;
     color: #19467b;
   }
