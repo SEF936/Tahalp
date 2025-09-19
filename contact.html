@@ -54,7 +54,7 @@
       rel="stylesheet"
     />
     <meta name="theme-color" content="#ffffff" />
-               <link
+    <link
       rel="preload"
       as="image"
       type="image/webp"
@@ -161,16 +161,13 @@
                   autocomplete="on"
                   required
                 />
-              </label>  
+              </label>
               <div class="adhesion">
-               <label for="adhesion"
-                >Je souhaite adhérer
-                      </label>
-                <input
-              type="checkbox"
-                />
-        
-                
+                <label for="adhesion"
+                  >Je souhaite devenir adhérent
+                  <input type="checkbox" name="adhesion" id="adhesion" />
+                </label>
+                <input type="hidden" name="adhesion_hidden" value="Non" />
               </div>
 
               <label for="message"
@@ -301,6 +298,19 @@
         .getElementById("contact-form")
         .addEventListener("submit", function (e) {
           e.preventDefault();
+
+          // On récupère la checkbox
+          const adhesionCheckbox = this.querySelector("input[name='adhesion']");
+          const hiddenField = this.querySelector(
+            "input[name='adhesion_hidden']"
+          );
+
+          // Si cochée => Oui, sinon => Non
+          if (adhesionCheckbox.checked) {
+            hiddenField.value = "Oui";
+          } else {
+            hiddenField.value = "Non";
+          }
 
           emailjs.sendForm("service_ioa4zzv", "template_qnfcya5", this).then(
             function (response) {
