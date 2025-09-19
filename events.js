@@ -35,7 +35,7 @@ const evenements = [
   {
     id: 5,
     titre: "Couscou Day",
-    date: "01/11/2025",
+    date: "07/12/2025",
     image: "./assets/couscous.webp",
     alt: "couscous",
     texte:
