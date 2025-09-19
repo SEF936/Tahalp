@@ -69,8 +69,11 @@ input {
   justify-content: left;
 
   label {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
     margin: 0;
-    width: 55%;
+    width: 80%;
   }
 
   input {
