@@ -139,8 +139,9 @@
       rel="preload"
       as="image"
       type="image/webp"
-      href="./assets/Yennayer.webp"
+      href="./assets/Yennayer1.jpg"
     />
+    <script src="events.js" defer></script>
   </head>
   <body>
     <header id="header_main">
@@ -195,118 +196,15 @@
       </nav>
     </header>
     <main>
-      <section id="consultations" class="consultations-section">
+      <section id="evenements" class="evenements-section">
         <div class="title-presentation">
           <h2>Evénements</h2>
         </div>
-        <div class="consultations-global-container">
-          <div class="consultation-container">
-            <div
-              class="image-consultation"
-              onclick="toggleParagraphVisibility('consultation-paragraph1')"
-            >
-              <h3>Couscous Day</h3>
 
-              <picture>
-                <source
-                  media="(min-width: 320px)"
-                  srcset="./assets/couscous.webp"
-                />
-                <img
-                  src="./assets/couscous.webp"
-                  alt="séance psy"
-                  width="320"
-                  height="auto"
-                />
-              </picture>
-            </div>
-            <div class="text-consultation-container">
-              <div class="paragraph-hidden" id="consultation-paragraph1">
-                <div class="event-title">
-                  <span>26/10/2025</span>
-                  <h3>Couscous Day</h3>
-                </div>
-
-                <p>
-                  Venez célébrer avec nous le plat emblématique récemment
-                  inscrit au patrimoine mondial de l'UNESCO ! Le Couscous Day
-                  est bien plus qu'un simple moment gourmand : c'est une
-                  véritable fête des sens, un hommage à nos traditions
-                  familiales et à notre héritage culinaire. Dans une ambiance
-                  chaleureuse et conviviale, nous vous invitons à partager ce
-                  symbole de générosité et de vivre-ensemble à travers des
-                  dégustations, des animations et des ateliers pour petits et
-                  grands.
-                </p>
-              </div>
-
-              <picture>
-                <source
-                  media="(min-width: 745px)"
-                  srcset="./assets/couscous.webp"
-                />
-                <img
-                  src="./assets/couscous.webp"
-                  alt="séance psy"
-                  width="800"
-                  height="auto"
-                />
-              </picture>
-            </div>
-          </div>
-          <div class="consultation-container">
-            <div
-              class="image-consultation"
-              onclick="toggleParagraphVisibility('consultation-paragraph2')"
-            >
-              <h3>Yennayer - Nouvel An Amazigh</h3>
-              <picture>
-                <source
-                  media="(min-width: 320px)"
-                  srcset="./assets/Yennayer.webp"
-                />
-                <img
-                  src="./assets/Yennayer.webp"
-                  alt="séance psy"
-                  width="320"
-                  height="auto"
-                />
-              </picture>
-            </div>
-            <div class="text-consultation-container">
-              <div class="paragraph-hidden" id="consultation-paragraph2">
-                <div class="event-title">
-                  <span>11/01/2026</span>
-                  <h3>Yennayer - Nouvel An Amazigh</h3>
-                </div>
-                <p>
-                  Plongez dans l'univers fascinant du Nouvel An berbère, une
-                  fête ancestrale célébrée depuis des siècles à travers le monde
-                  amazigh. Yennayer marque non seulement le début d'une nouvelle
-                  année, mais aussi la fin des labours et le cœur de la saison
-                  humide. C'est un moment de rassemblement, de transmission et
-                  de spiritualité, où se mêlent repas traditionnels, jeux
-                  populaires, rites symboliques et récits anciens. Une occasion
-                  unique de découvrir la richesse de cette culture et de ses
-                  liens profonds avec la nature et l'invisible.
-                </p>
-              </div>
-
-              <picture>
-                <source
-                  media="(min-width: 745px)"
-                  srcset="./assets/Yennayer.webp"
-                />
-                <img
-                  src="./assets/Yennayer.webp"
-                  alt="séance psy"
-                  width="800"
-                  height="auto"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
+        <div
+          id="evenements-global-container"
+          class="evenements-global-container"
+        ></div>
       </section>
     </main>
 
@@ -393,6 +291,7 @@
     </footer>
 
     <script src="index.js"></script>
+
     <script
       src="https://kit.fontawesome.com/a65e31546e.js"
       crossorigin="anonymous"

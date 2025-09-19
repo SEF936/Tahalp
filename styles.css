@@ -332,6 +332,7 @@ main {
   }
   .picture-presentation-container {
     width: 90%;
+    height: 26rem;
     margin: 0 auto;
     flex-direction: row;
     align-items: center;
@@ -351,10 +352,7 @@ main {
 }
 
 @media screen and (min-width: 1240px) {
-  .picture-presentation-container {
-    width: 90%;
-    height: 20rem;
-  }
+
   .picture-presentation-container:nth-child(3) picture {
     width: 100%;
   }
@@ -366,6 +364,7 @@ main {
 
   .objectifs-container {
     flex-direction: column;
+    width: 250%;
   }
   .picture-presentation-container img {
     width: 100%;

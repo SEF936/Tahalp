@@ -1,4 +1,4 @@
-.consultations-section {
+.evenements-section {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -9,16 +9,6 @@
   margin: 0 auto 2rem auto;
   padding-top: 4rem;
 }
-
-.consultations-global-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-  gap: 3rem;
-}
-
 .title-presentation h2 {
   font-size: 2rem;
   color: #0e1b48;
@@ -27,28 +17,20 @@
   font-family: "Pompiere", sans-serif;
 }
 
-.consultations-container {
+.evenements-global-container {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
-  gap: 1rem;
-}
-
-.image-consultation h3 {
-  position: absolute;
-  text-align: center;
-  color: #fff;
+  flex-wrap: wrap;
+  /* align-items: center; */
   width: 100%;
-  z-index: 1;
+  gap: 3rem;
 }
-
-.consultation-container {
+.evenement-container {
   width: 20rem;
   border-radius: 5px;
 }
 
-.image-consultation {
+.image-evenement {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -57,26 +39,37 @@
   align-items: center;
   position: relative;
 }
-
-.image-consultation picture {
+.image-evenement h3 {
+  position: absolute;
+  text-align: center;
+  padding: 0 1rem;
+  color: #fff;
+  width: 100%;
+  z-index: 1;
+}
+.image-evenement picture {
   width: 100%;
   height: 10rem;
 }
-
-.image-consultation img {
+.image-evenement img {
   width: 100%;
   max-height: 10rem;
   filter: opacity(0.8) brightness(0.5);
   border-radius: 5px;
 }
+.text-evenement-container {
+  background-color: #fff;
 
+  p {
+    padding: 1rem;
+  }
+}
 .paragraph-hidden {
   display: none;
   /* Hide the paragraph by default */
   padding: 10px;
   /* Add some padding for better visibility */
 }
-
 .paragraph-visibility {
   transition: opacity 1s ease;
   /* Smooth transition effect */
@@ -87,13 +80,18 @@
   border-radius: 0 0 5px 5px;
   margin-bottom: 2rem;
 }
-
 .paragraph-visibility h3 {
   display: none;
 }
-.event-title{
+.event-title {
   display: flex;
-  
+  flex-direction: column;
+  padding: 0 1rem;
+
+  h3 {
+    color: #0e1b48;
+    text-align: center;
+  }
 }
 .event-title span {
   width: 6rem;
@@ -103,7 +101,7 @@
   color: #0e1b48;
 }
 
-.text-consultation-container picture {
+.text-evenement-container picture {
   display: none;
 }
 
@@ -115,80 +113,30 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .consultations-section {
+  .evenements-section {
     width: 90%;
     padding-top: 2rem;
-    /* height: 90vh; */
   }
-
-  .image-consultation h3 {
-    display: none;
+  .evenements-global-container {
+    max-width: 90rem;
+    margin: 2rem auto;
   }
-
-  .event-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin: 2rem 0;
-    color: #19467b;
-  }
-
-  .event-title h3 {
-    font-size: 1.5rem;
-  }
-
-  .event-title span {
-    margin-left: 0rem;
-    display: flex;
-  }
-
-  /* .consultations-global-container {
-    display: flex;
-    flex-direction: column;
-  } */
-  .title-presentation h2 {
-    font-size: 3rem;
-    width: 100%;
-  }
-
-  /* .first-consult-container {
-    margin: 2rem 0;
-  }
-  .first-consult-container h3 {
-    font-size: 1.5rem;
-  } */
-  .consultations-global-container .consultation-container {
+  .evenements-global-container .evenement-container {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     width: 90%;
   }
-
-  .image-consultation {
+  .image-evenement {
     cursor: initial;
     flex-direction: column;
     width: 100%;
-
     min-width: 40rem;
     max-width: 100rem;
   }
-
-  /* .consultation-container:nth-child(3) .text-consultation-container {
-    cursor: initial;
-    flex-direction: row;
-    text-align: justify;
-  } */
-
-  .image-consultation picture {
+  .image-evenement h3 {
     display: none;
-  }
 
-  .image-consultation .event-title span {
-    display: block;
-  }
-
-  .image-consultation h3 {
     position: relative;
     font-size: 1.5rem;
     text-align: center;
@@ -196,43 +144,56 @@
     padding: 2rem;
     color: #19467b;
   }
+  .image-evenement picture {
+    display: none;
+  }
+  .text-evenement-container {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #fff;
+    gap: 2rem;
+    height: 15rem;
+    align-items: center;
+    border-radius: 5px;
+  }
 
+  .text-evenement-container picture {
+    display: block;
+    width: 60rem;
+    height: 15rem;
+  }
+  .text-evenement-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
   .paragraph-hidden {
     display: block;
     width: 200%;
     text-align: justify;
     padding: 0;
-  }
 
-  .text-consultation-container {
+    p {
+      padding: 0 1rem 0 0;
+    }
+  }
+  .event-title {
     display: flex;
-    flex-direction: row-reverse;
-    background-color: #fff;
-    gap: 2rem;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    border-radius: 5px;
-  }
+    width: 95%;
+    color: #19467b;
 
-  .text-consultation-container picture {
-    display: block;
-    width: 60rem;
-    height: 18rem;
-  }
+    span {
+      margin-left: 0rem;
+      display: flex;
+    }
 
-  .text-consultation-container img {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-  }
-
-  .text-consultation-container p {
-    padding: 0 2rem 0 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .consultations-global-container {
-    max-width: 90rem;
-    margin: 2rem auto;
+    h3 {
+      font-size: 1.5rem;
+      width: 30rem;
+      text-align: end;
+    }
   }
 }
