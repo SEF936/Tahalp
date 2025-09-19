@@ -1,7 +1,8 @@
 {
-  "name": "App",
+  "name": "Tahalp",
   "display": "standalone",
   "start_url": "https://www.tahalp.ch",
+  "background_color": "#ffffff",
   "icons": [
     {
       "src": "/android-icon-36x36.png",
