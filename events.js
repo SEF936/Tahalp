@@ -41,15 +41,15 @@ const evenements = [
     texte:
       " Venez célébrer avec nous le plat emblématique récemment inscrit au patrimoine mondial de l'UNESCO ! Le Couscous Day est bien plus qu'un simple moment gourmand : c'est une véritable fête des sens, un hommage à nos traditions familiales et à notre héritage culinaire. Dans une ambiance chaleureuse et conviviale, nous vous invitons à partager ce symbole de générosité et de vivre-ensemble à travers des dégustations, des animations et des ateliers pour petits et grands.",
   },
-  {
-    id: 6,
-    titre: "Yennayer - Nouvel An Amazigh",
-    date: "11/01/2026",
-    image: "./assets/Yennayer1.jpg",
-    alt: "Yennayer",
-    texte:
-      "Plongez dans l'univers fascinant du Nouvel An berbère, une fête ancestrale célébrée depuis des siècles à travers le monde amazigh. Yennayer marque non seulement le début d'une nouvelle année, mais aussi la fin des labours et le cœur de la saison humide. C'est un moment de rassemblement, de transmission et de spiritualité, où se mêlent repas traditionnels, jeux populaires, rites symboliques et récits anciens. Une occasion unique de découvrir la richesse de cette culture et de ses liens profonds avec la nature et l'invisible.",
-  },
+ // {
+ //  id: 6,
+ //  titre: "Yennayer - Nouvel An Amazigh",
+ //   date: "11/01/2026",
+ //   image: "./assets/Yennayer1.jpg",
+ //   alt: "Yennayer",
+ //  texte:
+ //     "Plongez dans l'univers fascinant du Nouvel An berbère, une fête ancestrale célébrée depuis des siècles à travers le monde amazigh. Yennayer marque non seulement le début d'une nouvelle année, mais aussi la fin des labours et le cœur de la saison humide. C'est un moment de rassemblement, de transmission et de spiritualité, où se mêlent repas traditionnels, jeux populaires, rites symboliques et récits anciens. Une occasion unique de découvrir la richesse de cette culture et de ses liens profonds avec la nature et l'invisible.",
+ // },
   // {
   //   id: 7,
   //   titre: "Journée mondiale contre le racisme",
